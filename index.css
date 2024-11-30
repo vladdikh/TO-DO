@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* темный фон */
+    color: white; /* светлый текст */
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #444; /* темный контейнер */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    background-color: orange;
+  }
+  
+  /* Hover для всех кнопок */
+  button:hover {
+    opacity: 0.8; /* эффект при наведении */
+  }
+  
+  /* Стили для кнопки Удалить */
+  button.delete {
+    background-color: #dc3545;
+  }
+  
+  button.delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Стили для кнопки Выполнить */
+  button.action {
+    background-color: #007bff;
+  }
+  
+  button.action:hover {
+    background-color: #0056b3;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #555; /* темный фон задач */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* позволяет элементам переноситься */
+  }
+  li span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  li.completed span {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  /* Контроль за длинными задачами */
+  li span {
+    word-wrap: break-word; /* Перенос слов */
+    overflow-wrap: break-word; /* Для старых браузеров */
+    max-width: 80%; /* Ограничение ширины текста */
+    white-space: normal; /* Разрешает перенос на несколько строк */
+    display: inline-block; /* Чтобы текст занимал несколько строк */
+  }
+  
+  button {
+    margin-left: 10px; /* отступ между кнопками */
+    flex-shrink: 0; /* кнопки не сжимаются */
+  }
+  
